@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="first"><img src="logo.jpeg" alt="" style="width: 180px;height: 180px; border: solid 4px red; "></div>
+    <div class="second"><h1>INDIA VS SRILANKA 2ND TEST LIVE </h1></div> 
+
+
+    <div class="third"> <img src="download.jpg" alt="" style="width: 300px;height: 180px;"> </div>    
+    <div class="fourth">
+        <img src="iyer copy.jpg" alt="" style="width: 180px;height: 300px; float: left; border: solid 4px; float: left;;">
+         
+ <div class="score">
+    <p id="msg" style="color:red; ;"></p>
+  <b class="update" style="color:red; font-size: xx-large; border: 2px; border-collapse: separate;" > live score </b><br/>
+  <b class="current" style="color:green; font-size: xx-large; border: 2px; border-collapse: separate;" > live score </b><br/>
+  <b class="runrate" style="color:blue; font-size: xx-large; border: 2px; border-collapse: separate;" > Last Wicket</b><br/>
+  <b class="lastwicket" style="color:purple; font-size: xx-large; border: 2px; border-collapse: separate;" > Last Wicket</b><br/>
+  
+  <b class="partnership" style="color:purple; font-size: xx-large; border: 2px; border-collapse: separate;" > Last Wicket</b><br/><br><br><br>
+  </div>
+  
+  
+    
+  
+  <br/><br/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(function(){
+      // set cricbuzz.com live cricket score url.
+      let url = "https://www.cricbuzz.com/live-cricket-scores/38627/ind-vs-sl-2nd-test-sri-lanka-tour-of-india-2022";
+      getLiveScore(url);
+      setInterval(function(){ getLiveScore(url); }, 10000);
+      function getLiveScore(url) {
+        $("#msg").html("Updating score..");
+        $.getJSON('https://cricket-api.vercel.app/cri.php?url='+url,function(data) {
+               console.log(data);
+                $(".current").html(data['livescore']['current']);
+           $(".lastwicket").html(data['livescore']['lastwicket']);$("#msg").html("");
+           $(".runrate").html(data['livescore']['runrate']);$("#msg").html("");
+           $(".update").html(data['livescore']['update']);$("#msg").html("");
+           
+           $(".partnership").html(data['livescore']['partnership']);$("#msg").html("Live Score Update");
+         });
+      }  
+    }); 
+  </script>
+    </div>
+    <div class="five">
+        <div class="joke">
+            <button type="button" class="btn btn-primary btn-lg" id="joke" style="margin-left: 30px; font-size: xx-large;">JOKE FOR YOU </button> <br> <br>
+             <section>
+              <div class="container">
+                <div class="joke">
+                  <p></p>     
+            </section>
+            </div>>
+    </div>
+    <script src="app.js"></script>
+    <div class="sixth"></div>
+    <div class="seventh"></div>
+
+</body>
+</html>

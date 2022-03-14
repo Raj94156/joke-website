@@ -1,0 +1,51 @@
+.first
+{
+width: 25%;
+float: left;
+margin: auto;
+}
+.second
+{
+    width: 50%;
+    float: left;
+
+margin: auto;
+}
+
+.third
+{ 
+    width: 25%;
+    float: left;
+
+margin: auto;
+}
+
+.fourth
+{
+    border: solid 2px;
+    box-sizing: content-box;
+    padding: 2%;
+    border-radius: 3px;
+    border-color: brown;
+    box-shadow: aqua;
+    background-color: bisque;
+    padding-right: 0%;
+    border-width: 50%;
+    text-align: center;
+}
+
+.five{
+    border: solid 2px;
+    box-sizing: content-box;
+    padding: 2%;
+    border-radius: 3px;
+    border-color: brown;
+    box-shadow: aqua;
+    background-color: bisque;
+    padding-right: 0%;
+    border-width: 50%;
+    text-align: center;
+    font-size: x-large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
